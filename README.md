@@ -40,6 +40,9 @@ npm run start
 ```
 
 The hello service will be up and running on port 3000. Open a browser and visit: http://localhost:3000/hello
+<img width="1582" alt="Screenshot 2024-09-04 at 11 36 53 PM" src="https://github.com/user-attachments/assets/0a8f898b-e109-469f-9244-0712b7cdbdbf">
+
+
 
 Navigate to the `world-service` directory and the start the service:
 ```
@@ -47,7 +50,8 @@ cd world-service
 npm run start
 ```
 
-The hello service will be up and running on port 3001. Open a browser and visit: http://localhost:3001/world
+The world service will be up and running on port 3001. Open a browser and visit: http://localhost:3001/world
+<img width="1582" alt="Screenshot 2024-09-04 at 11 37 27 PM" src="https://github.com/user-attachments/assets/ce5f11ac-cae0-4e88-90f1-d6b58c77680a">
 
 
 ### 4. Running the services using Docker ###
@@ -70,6 +74,12 @@ docker run -p 3001:3001 world-service
 
 To test them, open a browser and visit http://localhost:3000/hello and http://localhost:3001/world.
 
+Hello service:
+<img width="1582" alt="Screenshot 2024-09-04 at 11 36 53 PM" src="https://github.com/user-attachments/assets/0a8f898b-e109-469f-9244-0712b7cdbdbf">
+
+World service:
+<img width="1582" alt="Screenshot 2024-09-04 at 11 37 27 PM" src="https://github.com/user-attachments/assets/ce5f11ac-cae0-4e88-90f1-d6b58c77680a">
+
 
 ### 5. Pushing docker images to DockerHub ###
 
@@ -89,6 +99,8 @@ Push the tagged images:
 docker push jainamchhatbar/hello-service:latest
 docker push jainamchhatbar/world-service:latest
 ```
+
+<img width="1582" alt="Screenshot 2024-09-04 at 11 40 18 PM" src="https://github.com/user-attachments/assets/443e301e-c62e-4028-b33a-37d743843be3">
 
 
 ### 6. Deploying services using Kubernetes ###
@@ -110,9 +122,16 @@ minikube service hello-service --url
 minikube service world-service --url
 ```
 
+Hello service:
+<img width="1578" alt="Screenshot 2024-09-04 at 11 41 55 PM" src="https://github.com/user-attachments/assets/f9423269-0836-4ed0-9ed6-59510cab7062">
+
+World service:
+<img width="1578" alt="Screenshot 2024-09-04 at 11 42 16 PM" src="https://github.com/user-attachments/assets/8495921e-a08f-4dc0-9acb-5838550e94c6">
+
+
 You will have to use these URLs to reach to the services. Update the placeholder URLs in the `test-script.js` file.
 
-### 7. Testing the microservcies ###
+### 7. Testing the microservices ###
 
 You can run a simple integration test that calls both microservices and prints "Hello World":
 ```
@@ -123,6 +142,7 @@ You should be able to see the output in the terminal as:
 ```
 Hello World
 ```
+<img width="1578" alt="Screenshot 2024-09-04 at 11 51 07 PM" src="https://github.com/user-attachments/assets/595abf01-9e34-4b8b-be8e-840007d17dd4">
 
 
 
